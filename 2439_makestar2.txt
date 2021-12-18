@@ -1,0 +1,25 @@
+import java.io.*;
+import java.lang.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        
+        for(int i=1; i<num+1;i++){
+            StringBuilder sb2 = new StringBuilder();
+             for(int k=num-i; k>0;k--){
+                sb2.append(" ");
+            }
+            for(int n=0; n<i;n++){
+                sb2.append("*");
+            }
+            sb.append(sb2).append("\n");    
+        }
+        
+        br.close();
+        System.out.println(sb);
+    }
+    
+}

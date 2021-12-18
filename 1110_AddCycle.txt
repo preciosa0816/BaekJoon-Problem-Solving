@@ -1,0 +1,19 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String fix = br.readLine();
+        int  var = Integer.parseInt(fix);
+        int result=0;
+       while(true){
+    	   result++;
+    	  var = (var%10)*10 + ((var/10)+(var%10))%10; 
+            if(Integer.parseInt(fix)==var){
+                break;
+            } 
+        }
+        br.close();
+        System.out.println(result);
+    }
+}
