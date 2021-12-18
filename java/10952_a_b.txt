@@ -1,0 +1,30 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        StringBuilder sb = new StringBuilder();
+        
+        boolean on = true;
+        int a,b,sum;
+        
+        while(on){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            a = Integer.parseInt(st.nextToken());
+            b = Integer.parseInt(st.nextToken());
+            sum = a+b;
+            if(sum>0){
+                sb.append(sum).append("\n");
+            }else{
+                on=false;
+            }
+        }
+        
+        br.close();
+        System.out.println(sb);
+    }
+    
+}

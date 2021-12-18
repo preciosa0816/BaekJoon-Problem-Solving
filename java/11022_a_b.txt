@@ -1,0 +1,23 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        int a,b;
+        
+        for(int i=1; i<num+1; i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            a = Integer.parseInt(st.nextToken());
+            b = Integer.parseInt(st.nextToken());
+            String result = a+" + "+b+" = "+(a+b);
+            sb.append("Case #").append(i).append(": ").append(result).append("\n");
+        }
+        br.close();
+        System.out.println(sb);
+    }
+    
+}

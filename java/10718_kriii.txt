@@ -1,0 +1,6 @@
+public class Main{
+    public static void main(String[] args) throws Exception{
+        String st = "강한친구 대한육군";
+        System.out.println(st+"\n"+st);
+    }
+}

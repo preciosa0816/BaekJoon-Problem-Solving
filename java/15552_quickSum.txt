@@ -1,0 +1,28 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String... args) throws IOException {
+        int testCases = sumUntilNewLine();
+        StringBuilder answer = new StringBuilder();
+        while (testCases-- > 0) {
+            answer.append(sumUntilNewLine()).append('\n');
+        }
+        System.out.print(answer.toString());
+    }
+
+    public static int sumUntilNewLine() throws IOException {
+        int sum = 0;
+        int buf = 0;
+        int c;
+        while((c = System.in.read()) != '\n') {
+            if (c == ' ') {
+                sum += buf;
+                buf = 0;
+            } else {
+                buf = (buf * 10) +(c - '0');
+            }
+        }
+        sum += buf;
+        return sum;
+    }
+}
