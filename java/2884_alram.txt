@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+	public static void main(String args[]) throws Exception{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+	    
+		while(st.hasMoreTokens()) {
+			int hour = Integer.parseInt(st.nextToken());
+            int min = Integer.parseInt(st.nextToken());
+			min-=45;
+            if(min>=0) {
+				System.out.println(hour+" "+min);
+			}else {
+                min+=60;
+                hour=(hour-1<0?23:hour-1);
+				
+				System.out.println(hour+" "+min);
+			}
+		}	    
+	}
+}
