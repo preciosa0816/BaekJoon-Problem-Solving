@@ -1,0 +1,23 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(br.readLine());
+        String st ="";
+        for(int i=0; i<num; i++){
+            int cur = 0;
+            int score = 0;
+            st = br.readLine();
+            for(int k=0; k<st.length(); k++){
+                if(st.charAt(k)=='O'){
+                    cur++;
+                    score+=cur;
+                }else{
+                    cur=0;
+                }
+            }
+            System.out.println(score);
+        }
+    }
+}
