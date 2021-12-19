@@ -1,0 +1,20 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int[] list = new int[42];
+        for(int i=0; i<10; i++){
+            int a = Integer.parseInt(br.readLine());
+            int d = a%42;
+            list[d]++;
+        }
+        int result=0;
+        for(int k : list){
+            if(k>0){
+             result++;   
+            }
+        }
+        System.out.println(result);
+    }
+}
