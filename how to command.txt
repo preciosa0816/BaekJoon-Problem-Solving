@@ -6,3 +6,4 @@ git branch -M main
 git push -u origin main
 
 git remote rm origin -- error: remote origin already exists. 
+zz
