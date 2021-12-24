@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int line = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        for(int i=0; i<line; i++){
+            String[] curLine = br.readLine().split(" ");
+            int cnt = Integer.parseInt(curLine[0]);
+            List<Integer> list = new ArrayList<>();
+            int sum = 0;
+            
+            for(int k=1; k<cnt+1; k++){
+                int cur = Integer.parseInt(curLine[k]);
+                sum+=cur;
+                list.add(cur);
+            }
+            int result = 0;
+            float avr = (float)sum/cnt;
+            for(int a : list){
+                if(a>avr){
+                    result++;
+                }
+            }
+            sb.append(String.format("%.3f", (float)result/cnt*100)).append("%\n");
+        }
+        System.out.println(sb);
+    }
+}
