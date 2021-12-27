@@ -1,0 +1,14 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(br.readLine());
+        String[] list = br.readLine().split("");
+        int result = 0;
+        for(int i =0; i<num; i++){
+            result += Integer.parseInt(list[i]);
+        }
+        System.out.println(result);
+    }
+}
