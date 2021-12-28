@@ -1,0 +1,26 @@
+public class Main{
+    public static void main(String[] args) throws Exception{
+        int str= System.in.read();
+        int[] line = new int[26];
+        while(str>='A') {
+        	if(str<='Z') { //대문자
+        		line[str-'A']++;
+        	}else {//소문자
+        		line[str-'a']++;
+        	}
+        	str = System.in.read();
+        }
+		
+        int max = -1;
+        int ch = '?'-'A';
+        for(int a=0;a<26; a++) {
+        	if(line[a]>max) {
+        		max=line[a];
+        		ch=a;
+        	}else if(line[a]==max) {
+        		ch='?'-'A';
+        	}
+        }
+        System.out.println((char)(ch+'A'));
+    }
+}
