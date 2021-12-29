@@ -1,0 +1,20 @@
+import java.io.*;
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] nums = br.readLine().split(" ");
+        String a = "";
+        String b = "";
+        for(int i=2; i>=0; i--){
+            a+=nums[0].charAt(i);
+            b+=nums[1].charAt(i);
+        }
+
+        if(Integer.parseInt(a)>Integer.parseInt(b)) {
+        	System.out.println(a);
+        }else {
+        	System.out.println(b);
+        }
+        
+    }
+}
