@@ -1,0 +1,47 @@
+1 2 9 22 41 66
+1 7 19 37 61
+
+1 7 19 37 61 
+
+1 
+2~7 6
+8~19 12 
+20~37 18 
+38~61 24 
+
+1 7 19 37 61 91 127 169 217
+0 6 12 18 24 30 36   42   48  54 60 66 72 ***180
+0 1  2  3  4   5   6	   7     8   9   10 11 12*** 30
+
+
+137
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Long num = Long.parseLong(br.readLine());
+        int cnt = 1;
+        long std = 1;
+        while(true){
+            if(std>=num){
+                System.out.println(cnt);
+                break;
+            }
+            std+=cnt*6;
+            cnt++;
+        } 
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
