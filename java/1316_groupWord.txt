@@ -1,0 +1,32 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int cnt = Integer.parseInt(br.readLine());
+        int result = 0;
+         
+        for(int i=0; i<cnt; i++){
+            String line = br.readLine(); 
+            char[] list = line.toCharArray(); 
+            char cur = 0;
+            boolean bl = true;
+            String a = "";
+            for(char c : list) {
+            	if(cur!=c) {
+            		if(a.contains(c+"")) {
+            			bl=false;
+            			break;
+            		}else {
+            			cur = c;
+            			a+=c;
+            		} 
+            	}
+            }
+            if(bl) {
+            	result++;
+            }
+        }
+        System.out.println(result);
+    }
+}
