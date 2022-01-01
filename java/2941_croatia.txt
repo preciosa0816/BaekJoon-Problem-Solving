@@ -1,0 +1,19 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        String[] list = { "c=","c-","dz=","d-","lj","nj","s=","z="};
+        int cnt = 0;
+        
+        for(String l : list) {
+        	while(line.contains(l)) {
+        		line=line.replaceFirst(l, " ");
+        		cnt++;
+        	}
+        }
+        line = line.replaceAll(" ", "");
+        System.out.println(cnt+line.length());
+    }
+}
