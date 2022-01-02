@@ -1,0 +1,35 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int cnt = Integer.parseInt(br.readLine());
+        int Switch = 1;//방향 0: 아래, 1:오른쪽, 2:아래대각선, 3:위대각선
+        int up = 1;
+        int down = 1;
+        
+        for(int i=1; i<cnt; i++){
+            if(Switch==1){
+                down++;
+                Switch=2;
+            }else if(Switch==2){
+                up++;
+                down--;
+                if(down==1){
+                	Switch=0;
+                }
+            }else if(Switch==0){
+                up++;
+                Switch=3;
+            }else if(Switch==3){
+                up--;
+                down++;
+                if(up==1){
+                	Switch=1;
+                }
+            }
+        }
+        System.out.println(up+"/"+down);
+        
+    }
+}

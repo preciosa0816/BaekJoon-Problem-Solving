@@ -1,0 +1,13 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] line = br.readLine().split(" ");
+        long up = Long.parseLong(line[0]);
+        long down = Long.parseLong(line[1]);
+        long goal = Long.parseLong(line[2]);
+
+        System.out.println((long)Math.ceil((double)(goal-down)/(up-down)));
+    }
+}
