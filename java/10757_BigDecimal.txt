@@ -1,0 +1,14 @@
+import java.io.*;
+import java.math.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String[] nums = br.readLine().split(" ");
+		BigDecimal a = new BigDecimal(nums[0]);
+		BigDecimal b = new BigDecimal(nums[1]);
+		BigDecimal sum = a.add(b);
+		
+        System.out.println(sum);
+    }
+}
