@@ -15,6 +15,6 @@ public class Main{
 			int room = seq%height==0?seq/height:seq/height+1;
 			
 			System.out.println((floor)+String.format("%02d", room)); 
-		}
+		} 
     }
 }
