@@ -1,0 +1,30 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int cnt = Integer.parseInt(br.readLine());
+        while(cnt>0){
+            String[] line = br.readLine().split(" ");
+            int a = Integer.parseInt(line[0]);
+            int b = Integer.parseInt(line[1]);
+            System.out.println(count(a,b));
+            cnt--;
+        }
+    }
+    
+    public static int count(int a, int b) throws Exception{
+        int result=0;
+        int length = b-a;
+        double max = Math.round(Math.sqrt(length));
+        
+        if(length>Math.pow(max, 2)) {
+        	result = 2*(int)max;
+        }else {
+        	result = 2*(int)max-1;
+        }
+        
+        return result;
+    }
+    
+}
