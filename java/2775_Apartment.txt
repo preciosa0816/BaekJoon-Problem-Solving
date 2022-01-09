@@ -1,0 +1,26 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int cnt = Integer.parseInt(br.readLine());
+        int[][] list= new int[15][15];
+        
+        //배열 초기화
+        for(int i=0; i<15; i++){
+            list[0][i]=i;
+            list[i][1]=1;
+        }
+        while(cnt>0){
+            int k = Integer.parseInt(br.readLine()); //층
+            int n = Integer.parseInt(br.readLine()); //호
+            for(int a=1; a<=k; a++){ //층
+                for(int b=1; b<=n; b++){ //호
+                    list[a][b] = list[a-1][b]+list[a][b-1];
+                }
+            }
+            System.out.println(list[k][n]);
+            cnt--;
+        }
+    }
+}
