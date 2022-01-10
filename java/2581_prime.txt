@@ -1,0 +1,42 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int start = Integer.parseInt(br.readLine());
+        int end = Integer.parseInt(br.readLine());
+        int sum = 0;
+        int min = 0;
+        boolean prime = false;
+        
+        for(int i=start; i<=end; i++){
+            if(count(i)==1){
+                if(!prime){
+                    min=i;
+                    prime=true;
+                }
+               sum+=i; 
+            }
+        }
+        if(prime){
+            System.out.println(sum+"\n"+min);
+        }else{
+            System.out.println("-1");
+        }
+        
+    }
+    
+    public static int count(int a) throws Exception{
+	    int end = (int)Math.round(Math.sqrt(a));
+	    if(a>1){
+	        for(int i=2; i<=end; i++){
+	           if(a%i==0){
+	               return 0;
+	            }
+	        }
+	        return 1;
+	     }
+	     return 0;
+    }    
+    
+}
