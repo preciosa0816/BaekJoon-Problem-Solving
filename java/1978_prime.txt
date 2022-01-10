@@ -1,0 +1,33 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int cnt = Integer.parseInt(br.readLine());
+        String[] line = br.readLine().split(" ");
+        int seq = 0;
+        int result = 0;
+        
+        while(cnt>0){
+            int a = Integer.parseInt(line[seq]);
+            result+=count(a);
+            cnt--;
+            seq++;
+        }
+        System.out.println(result);
+    }
+    
+    public static int count(int a) throws Exception{
+	       
+	    if(a>1){
+	        for(int i=2; i<a; i++){
+	           if(a%i==0){
+	               return 0;
+	            }
+	        }
+	        return 1;
+	     }
+	     return 0;
+    }    
+    
+}
