@@ -1,0 +1,27 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(br.readLine());
+        int std=2;
+        int end = (int)Math.sqrt(num);
+        while(true){
+            if(num%std==0){
+                System.out.println(std);
+                num=num/std;
+            }else{
+                std++;
+            }
+            
+            if(num<=std || std>end){
+                break;
+            }
+        }
+        
+        if(num>1) {
+        	System.out.println(num);
+        }
+        
+    }
+}
