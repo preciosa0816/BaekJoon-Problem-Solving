@@ -1,0 +1,37 @@
+import java.io.*;
+
+public class Main{
+	public static boolean[] prime = new boolean[10000]; //문제에서 요구하는 최댓값 설정
+    
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int cnt = Integer.parseInt(br.readLine());
+		setPrime();
+		while(cnt-->0){
+            int num = Integer.parseInt(br.readLine());
+            int first = 0;
+            int second =0;
+            for(int i=2; i<=num/2; i++){
+                if(!prime[i] &&!prime[num-i]){
+                    first=i;
+                    second = num-i;
+                }
+            }
+            System.out.println(first+" "+second);
+        }       
+    }
+    //소수를 미리구해놓음
+    public static void setPrime() throws Exception{
+	    prime[0]=true;
+        prime[1]=true;
+
+        for(int i=2; i*i<prime.length; i++){
+            if(prime[i]) continue;
+
+            for(int j=i*i; j<prime.length; j+=i){
+                prime[j]=true;
+            }  
+        }
+    }   
+    
+}
