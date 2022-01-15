@@ -1,5 +1,4 @@
 import java.io.*;
-
 public class Main{
 	public static boolean[] prime = new boolean[246913]; //문제에서 요구하는 최댓값 설정
     
