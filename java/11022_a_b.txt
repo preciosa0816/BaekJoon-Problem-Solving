@@ -7,7 +7,7 @@ public class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
-        int a,b;
+        int a, b;
         
         for(int i=1; i<num+1; i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
