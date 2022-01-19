@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.Arrays;
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str;
+        String[] list;
+        
+        while(!(str=br.readLine()).equals("0 0 0")){
+            list = str.split(" ");
+            int a = Integer.parseInt(list[0]);
+            int b = Integer.parseInt(list[1]);
+            int c = Integer.parseInt(list[2]);
+            int[] intlist= {a,b,c};
+            Arrays.sort(intlist);
+            if(Math.pow(intlist[2], 2)==Math.pow(intlist[0], 2)+Math.pow(intlist[1], 2)){
+                System.out.println("right");
+            }else {
+            	System.out.println("wrong");
+            }
+            
+        }
+    }
+}
