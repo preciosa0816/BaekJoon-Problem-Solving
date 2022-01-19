@@ -15,7 +15,6 @@ public class Main{
             first[a]++;
             sec[b]++;
         } 
-        
         int c = 0;
         int d = 0;
         for(int i = 1;i<1001; i++){
