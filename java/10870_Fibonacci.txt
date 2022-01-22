@@ -1,0 +1,23 @@
+import java.io.*;
+
+public class Main {
+ 
+	public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int result=0;
+		int num = Integer.parseInt(br.readLine());
+        int first = 0;
+        int second = 1;
+        if(num<2) {
+        	result=num;
+        }else {
+		    for(int i=1; i<num; i++){
+		        result=first+second;
+		        first=second;
+		        second=result;
+		    }
+        }
+        System.out.println(result);
+	}
+ 
+}
