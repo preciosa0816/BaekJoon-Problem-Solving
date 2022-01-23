@@ -1,0 +1,19 @@
+import java.io.*;
+
+public class Main {
+ 
+	public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int num = Integer.parseInt(br.readLine());
+        System.out.println(factorial(num));
+	}
+
+	public int factorial(int n) throws Exception{
+		if(n<2) {
+			return n;
+		}else {
+			return n*factorial(n-1);
+		}
+    } 
+ 
+}
