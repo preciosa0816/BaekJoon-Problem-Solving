@@ -1,0 +1,19 @@
+import java.io.*;
+
+public class Main {
+ 
+	public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int num = Integer.parseInt(br.readLine());
+        System.out.println(fibonacci(num));
+	}
+
+	public int fibonacci(int n) throws Exception{
+		if(n<2) {
+			return n;
+		}else {
+			return fibonacci(n-2)+fibonacci(n-1);
+		}
+    } 
+ 
+}
