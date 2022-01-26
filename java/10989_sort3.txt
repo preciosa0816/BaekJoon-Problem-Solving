@@ -1,0 +1,23 @@
+import java.io.*;
+public class Main {
+	public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+		int num = Integer.parseInt(br.readLine());
+        int[] arr = new int[10001];
+        
+		for(int i=0; i<num; i++) {
+            int a = Integer.parseInt(br.readLine());
+			arr[a]++;
+		}
+		for(int i=0; i<10001; i++) {
+            if(arr[i]>0){
+                int repeat=arr[i];
+                while(repeat-->0){
+                    sb.append(i).append("\n");
+                }
+            }
+		}
+        System.out.print(sb);
+	} 
+}
