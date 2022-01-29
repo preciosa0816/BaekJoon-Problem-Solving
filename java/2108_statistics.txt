@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+	public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(br.readLine());
+        int mid = Math.round(num/2);
+        int[] numList= new int[num];
+        int[] totList = new int[8001];
+        int sum = 0;
+        for(int i=0; i<num; i++){
+        	int cur = Integer.parseInt(br.readLine());
+            numList[i]=cur;
+            totList[cur+4000]++;
+            sum+=cur;
+        }
+        Arrays.sort(numList);
+
+        System.out.println(Math.round((double)sum/num)); //산술평균
+        System.out.println(numList[mid]); //중앙값
+        int m = 0; //빈도수 
+        int fre = -5000; //저장
+        boolean chk = false;
+        for(int t =0; t<8001; t++) {
+        	if(totList[t]>0) {
+        		if(totList[t]>m) {
+            		m=totList[t];
+            		fre=t-4000;
+            		chk=true;
+            	}else if(totList[t]==m && chk==true) {
+            		fre = t-4000;
+            		chk=false;
+            	}
+        	}
+        	
+        }
+        System.out.println(fre); //빈도
+        System.out.println(numList[num-1]-numList[0]); //범위
+        
+	} 
+}
