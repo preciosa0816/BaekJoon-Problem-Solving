@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+	public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        Integer[] nums = new Integer [line.length()];
+        int index = 0;
+		for(String a : line.split("")) {
+        	nums[index] = Integer.parseInt(a);
+        	index++;
+        }
+		Arrays.sort(nums, Collections.reverseOrder());
+		for(int a : nums) {
+			System.out.print(a);
+		}
+	} 
+}
