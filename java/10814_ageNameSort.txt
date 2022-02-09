@@ -28,7 +28,6 @@ public class Main {
         for(String[] a : arr) {
             sb.append(a[0]+" "+a[1]).append("\n");
         }
-        
         System.out.println(sb);
-	} 
+} 
 }
