@@ -27,7 +27,6 @@ public class Main {
             for(int i : origin){
                 sb.append(map.get(i)).append(" ");
             }
-        
         System.out.println(sb.toString());
     } 
 }
