@@ -21,7 +21,6 @@ public class Main {
                 if(!map.containsKey(i)){
                     map.put(i,rank++);
                 }
-
             }
             StringBuilder sb = new StringBuilder();
             for(int i : origin){
