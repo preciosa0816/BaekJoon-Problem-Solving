@@ -1,0 +1,23 @@
+import java.io.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line[] = br.readLine().split(" ");
+        int a = Integer.parseInt(line[0]);
+        int b = Integer.parseInt(line[1]);
+		
+		int result1 = 1; //최소공배수
+        int result2 = 1; //최대공약수
+        int min = Math.min(a, b);
+        for(int i=2; i<=min; i++) {
+        	if(a%i==0&&b%i==0) {
+        		result1 = i;
+        	}
+        }
+        
+        result2 = result1*(a/result1)*(b/result1);
+		System.out.println(result1);
+		System.out.println(result2);
+    }
+}
