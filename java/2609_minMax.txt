@@ -15,7 +15,6 @@ public class Main{
         		result1 = i;
         	}
         }
-        
         result2 = result1*(a/result1)*(b/result1);
 		System.out.println(result1);
 		System.out.println(result2);
