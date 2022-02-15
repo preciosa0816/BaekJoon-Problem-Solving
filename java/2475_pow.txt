@@ -1,0 +1,15 @@
+import java.io.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));
+        String[] line = br.readLine().split(" ");
+        int sum = 0;
+        for(int i=0; i< 5; i++){
+            int cur = Integer.parseInt(line[i]);
+            sum+=Math.pow(cur, 2);
+        }
+        System.out.println(sum%10);
+        
+    }
+}
