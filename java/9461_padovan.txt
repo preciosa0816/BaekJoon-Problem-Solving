@@ -1,0 +1,28 @@
+import java.io.*;
+public class Main{
+    static long[] arr = new long[101];
+    public static void main(String[] args) throws Exception{
+        BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));
+		triangles();
+		int cnt = Integer.parseInt(br.readLine());
+        //StringBuilder sb = new StringBuilder();
+        
+        for(int i=0; i<cnt; i++){
+            int num = Integer.parseInt(br.readLine());
+            System.out.println(arr[num]);
+            //sb.append(arr[num]).append("\n");
+        }
+        
+    }
+    
+    public static void triangles(){
+		arr[0]=0;
+		for(int i = 1; i<=100; i++) {
+			if(i<=3) {
+				arr[i]=1;
+			}else {
+				arr[i]=arr[i-2]+arr[i-3];
+			}
+		}
+    }
+}
