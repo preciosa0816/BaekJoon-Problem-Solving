@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main{
+    static long[] arr = new long[91];
+    public static void main(String [] args) throws Exception{
+        Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+        System.out.printlnfib(num));
+        sc.close();
+    }
+    public static long fib(int n){
+        if(n<2){
+            arr[0]=0;
+            arr[1]=1;
+            return arr[n];
+        }
+            
+        if(arr[n]==0){
+                arr[n]=arr[n-1]+arr[n-2];
+        }else{
+            return arr[n];
+        }
+		return fib(n-1)+fib(n-2);
+        
+    }
+}
